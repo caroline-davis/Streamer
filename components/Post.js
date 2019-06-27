@@ -8,13 +8,13 @@ export default function Post(props) {
   return (
     <View style={styles.container}>
       <View style={styles.headerView}>
-      <ProfilePic />
-      <Text style={styles.bigUsername}> fakename {props.username}</Text>
+      <ProfilePic profilePicURL={props.profilePicURL} />
+      <Text style={styles.bigUsername}>{props.username}</Text>
       </View>
     <Image style={styles.picture} source={{uri: PIC_POST_URL + props.postId + "/400/400"}}/>
       <View>
         <Text style={styles.smallUsername}>
-         username {props.username}
+         {props.username + " "}
          <Text style={styles.postTitleAndComments}>{props.postTitle}</Text>
         </Text>
 
