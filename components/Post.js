@@ -1,7 +1,6 @@
 import React from "react";
 import { StyleSheet, View, Text, Image, Button } from 'react-native';
 import ProfilePic from "./ProfilePic";
-import Comments from "./Comments";
 import { PIC_POST_URL } from "../lib/constants";
 
 export default function Post(props) {
@@ -17,8 +16,6 @@ export default function Post(props) {
          {props.username + " "}
          <Text style={styles.postTitleAndComments}>{props.postTitle}</Text>
         </Text>
-
-      <Text style={styles.postTitleAndComments}> comments {props.comments} </Text>
       </View>
     </View>
   );
@@ -26,20 +23,20 @@ export default function Post(props) {
 
 const styles= StyleSheet.create({
   container: {
-    // flex: 1,
+    paddingVertical: 10,
     paddingLeft: "15%",
     paddingRight: "15%"
-    //alignItems: "center",
-    //justifyContent: "center",
-
   },
   headerView: {
     flexDirection: "row",
-    paddingLeft: 10
+    paddingLeft: 5,
+    paddingBottom: 5,
+    alignItems: "center"
   },
   bigUsername: {
     fontSize: 24,
-    fontFamily: "Arial Rounded MT Bold"
+    fontFamily: "Arial Rounded MT Bold",
+    paddingLeft: 10
   },
   smallUsername: {
     fontSize: 14,

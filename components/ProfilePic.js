@@ -17,5 +17,3 @@ const styles = StyleSheet.create({
     backgroundColor: "silver"
   }
 });
-
-// "https://via.placeholder.com/600/771796"

@@ -38,8 +38,6 @@ loadPosts = async() => {
    this.setState({ pics });
  }
 
-
-
   render() {
   return (
 
@@ -51,7 +49,6 @@ loadPosts = async() => {
       {this.state.posts.map(post => {
 
         const user = this.state.users.find(user => (user.id === post.userId));
-
         const userPic = this.state.pics.find(pic => (pic.id === user.id));
 
         return (
